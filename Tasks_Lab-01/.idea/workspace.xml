@@ -37,6 +37,10 @@
     "Application.Task3.executor": "Run",
     "Application.Task4.executor": "Run",
     "Application.Task5.executor": "Run",
+    "Application.Task6.executor": "Run",
+    "Application.Task7.executor": "Run",
+    "Application.Task8.executor": "Run",
+    "Application.Task9.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -65,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718344662770</updated>
       <workItem from="1718344663834" duration="33000" />
-      <workItem from="1718345045799" duration="847000" />
+      <workItem from="1718345045799" duration="1746000" />
     </task>
     <servers />
   </component>
