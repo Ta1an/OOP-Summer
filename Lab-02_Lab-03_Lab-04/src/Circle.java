@@ -54,11 +54,11 @@ public class Circle extends MyShape {
     }
     @Override
     public String toString() {
-        return "Circle{" +
-                "XCoordinate=" + xCoordinate +
-                ", YCoordinate=" + yCoordinate +
-                ", Radius=" + radius +
-                "} which is subclass of" + super.toString();
+        return "Circle {" +
+                "XCoordinate = " + xCoordinate +
+                ", YCoordinate = " + yCoordinate +
+                ", Radius = " + radius +
+                "} which is subclass of " + super.toString();
     }
 
     Double getArea(){

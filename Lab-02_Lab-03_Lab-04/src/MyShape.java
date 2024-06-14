@@ -28,6 +28,6 @@ public class MyShape {
     }
     @Override
     public String toString() {
-        return "MyShape (Color=" + color + ", IsFilled=" + filled + ")";
+        return "MyShape {Color = " + color + ", IsFilled = " + filled + '}';
     }
 }

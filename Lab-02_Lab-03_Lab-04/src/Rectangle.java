@@ -64,18 +64,18 @@ public class Rectangle extends MyShape {
     }
     @Override
     public String toString() {
-        return "Rectangle{" +
+        return "Rectangle {" +
                 "TopLeftCoordinate = (" + xTopLeftCoordinate + ", " + yTopLeftCoordinate + ')' +
                 ", BottomRightCoordinate = (" + xBottomRightCoordinate + ", " + yBottomRightCoordinate + ')' +
-                "} which is subclass of" + super.toString();
+                "} which is subclass of " + super.toString();
     }
 
     int getArea(){
-        return (xTopLeftCoordinate-xBottomRightCoordinate)*
+        return (xBottomRightCoordinate-xTopLeftCoordinate)*
                 (yTopLeftCoordinate-yBottomRightCoordinate);
     }
     int getPerimeter(){
-        return 2*((xTopLeftCoordinate-xBottomRightCoordinate)+
+        return 2*((xBottomRightCoordinate-xTopLeftCoordinate)+
                 (yTopLeftCoordinate-yBottomRightCoordinate));
     }
     int getCenterX(){
@@ -85,7 +85,7 @@ public class Rectangle extends MyShape {
         return (yBottomRightCoordinate+yTopLeftCoordinate)/2;
     }
     int getLength(){
-        return (xTopLeftCoordinate-xBottomRightCoordinate);
+        return (xBottomRightCoordinate - xTopLeftCoordinate);
     }
     int getWidth(){
         return (yTopLeftCoordinate-yBottomRightCoordinate);

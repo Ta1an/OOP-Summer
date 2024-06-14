@@ -7,7 +7,7 @@ public class Square extends Rectangle {
         super(
                 xTopLeftCoordinate,
                 yTopLeftCoordinate,
-                xTopLeftCoordinate - sideLength,
+                xTopLeftCoordinate + sideLength,
                 yTopLeftCoordinate - sideLength
         );
     }
@@ -16,7 +16,7 @@ public class Square extends Rectangle {
         super(
                 xTopLeftCoordinate,
                 yTopLeftCoordinate,
-                xTopLeftCoordinate - sideLength,
+                xTopLeftCoordinate + sideLength,
                 yTopLeftCoordinate - sideLength,
                 color,
                 filled
@@ -29,6 +29,9 @@ public class Square extends Rectangle {
 
     @Override
     public String toString() {
-        return "A square with side = " + getLength() + ", which is subclass of" + super.toString();
+        return "Square {" +
+                "XCoordinate = " + xTopLeftCoordinate +
+                ", YCoordinate = " + yTopLeftCoordinate +
+                ", Side Length = " + getSideLength() + "} which is subclass of " + super.toString();
     }
 }

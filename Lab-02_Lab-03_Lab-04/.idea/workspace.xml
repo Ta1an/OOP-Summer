@@ -5,78 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f353811-7da2-42c3-ac47-37a6dc299667" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Tasks_Lab-01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/Lab 02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/Tasks_Lab-01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/src/MyShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/src/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 02, Lab 03/src/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/.idea/Tasks, Lab 01.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/1/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/1/1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/src/Task1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/2/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/2/2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/src/Task2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/3/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/3/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/3/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/3/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/3/3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/src/Task3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/4/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/4/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/4/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/4/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/4/4.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/4/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/src/Task4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/5/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/5/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/5/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/5/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/5/5.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/5/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/src/Task5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/6/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/6/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/6/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/6/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/6/6.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/6/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/src/Task6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/7/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/7/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/7/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/7/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/7/7.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/7/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/src/Task7.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/8/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/8/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/8/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/8/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/8/8.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/8/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/9/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/9/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/9/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/9/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/9/9.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tasks, Lab 01/9/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/src/Task9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyShape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tasks_Lab-01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tasks_Lab-01/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,9 +21,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2hrGLPFUjDa1UCa0Mi5kA8yXnKp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -96,6 +31,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -124,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718344727738</updated>
       <workItem from="1718344728783" duration="316000" />
+      <workItem from="1718347358256" duration="3879000" />
     </task>
     <servers />
   </component>
