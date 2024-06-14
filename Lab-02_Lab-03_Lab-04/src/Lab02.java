@@ -1,11 +1,12 @@
-import java.awt.*;
 import java.util.Scanner;
 
-public class Main {
+public class Lab02 {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
-        /* Lab 02 Circle
+        // Circle
+
         int xCoordinate = input.nextInt();
         int yCoordinate = input.nextInt();
         int radius = input.nextInt();
@@ -26,9 +27,8 @@ public class Main {
 
         System.out.println("Distance: " + myCircle.getDistanceTo(secondCircle));
 
-         */
 
-        /* Rectangle
+        // Rectangle
 
         int xTopLeftCoordinate = input.nextInt();
         int yTopLeftCoordinate = input.nextInt();
@@ -51,26 +51,5 @@ public class Main {
         System.out.println("Perimeter: " + secondRectangle.getPerimeter());
 
         System.out.println("Distance: " + myRectangle.getDistanceToTheCenterOf(secondRectangle));
-
-
-         */
-
-        int xCoordinate = input.nextInt();
-        int yCoordinate = input.nextInt();
-        int sideLength = input.nextInt();
-
-        Square square = new Square(xCoordinate, yCoordinate, sideLength);
-        System.out.println(square);
-        System.out.println("Area of square is: " + square.getArea());
-        System.out.println("Perimeter of square is: " + square.getPerimeter());
-        System.out.println("Color of square is: " + square.getColor());
-        System.out.println("Is square filled: " + square.isFilled());
-
-        String newColor = input.next();
-        square.setColor(newColor);
-
-        System.out.println("New color of square is: " + square.getColor());
-
-
     }
 }

@@ -34,4 +34,19 @@ public class Square extends Rectangle {
                 ", YCoordinate = " + yTopLeftCoordinate +
                 ", Side Length = " + getSideLength() + "} which is subclass of " + super.toString();
     }
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj){
+            return true;
+        }
+        if(obj == null || this.getClass() != obj.getClass()){
+            return false;
+        }
+        Square square = (Square) obj;
+        return super.equals(square);
+    }
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

@@ -62,12 +62,44 @@ public class Rectangle extends MyShape {
         this.xBottomRightCoordinate = xBottomRightCoordinate;
         this.yBottomRightCoordinate = yBottomRightCoordinate;
     }
+    public void setYBottomRightCoordinate(int yBottomRightCoordinate) {
+        this.yBottomRightCoordinate = yBottomRightCoordinate;
+    }
     @Override
     public String toString() {
         return "Rectangle {" +
                 "TopLeftCoordinate = (" + xTopLeftCoordinate + ", " + yTopLeftCoordinate + ')' +
                 ", BottomRightCoordinate = (" + xBottomRightCoordinate + ", " + yBottomRightCoordinate + ')' +
                 "} which is subclass of " + super.toString();
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj){
+            return true;
+        }
+        if(obj == null || this.getClass() != obj.getClass()){
+            return false;
+        }
+        Rectangle rectangle = (Rectangle) obj;
+        if(this.xTopLeftCoordinate != rectangle.xTopLeftCoordinate){
+            return false;
+        }
+        if(this.yTopLeftCoordinate != rectangle.yTopLeftCoordinate){
+            return false;
+        }
+        if(this.xBottomRightCoordinate != rectangle.xBottomRightCoordinate){
+            return false;
+        }
+        return this.yBottomRightCoordinate == rectangle.yBottomRightCoordinate;
+    }
+    @Override
+    public int hashCode(){
+        int result = super.hashCode();
+        result = 31 * result + xTopLeftCoordinate;
+        result = 31 * result + yTopLeftCoordinate;
+        result = 31 * result + xBottomRightCoordinate;
+        result = 31 * result + yBottomRightCoordinate;
+        return result;
     }
 
     int getArea(){

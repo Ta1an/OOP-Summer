@@ -60,6 +60,27 @@ public class Circle extends MyShape {
                 ", Radius = " + radius +
                 "} which is subclass of " + super.toString();
     }
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj){
+            return true;
+        }
+        if(obj == null || this.getClass() != obj.getClass()){
+            return false;
+        }
+        Circle other = (Circle) obj;
+        return (this.xCoordinate == other.xCoordinate) &&
+                (this.yCoordinate == other.yCoordinate) &&
+                (this.radius == other.radius);
+    }
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + this.xCoordinate;
+        result = 31 * result + this.yCoordinate;
+        result = 31 * result + this.radius;
+        return result;
+    }
 
     Double getArea(){
         return Math.PI * Math.pow(this.radius, 2);
