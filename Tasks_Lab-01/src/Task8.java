@@ -8,7 +8,7 @@ public class Task8 {
         double sum = 0;
         int denominator = 1;
         boolean flag = true;
-        for(int i = 0; i <= n; i++) {
+        for(int i = 0; i < n; i++) {
             if(flag){
                 sum += (double) 1 /denominator;
             }
