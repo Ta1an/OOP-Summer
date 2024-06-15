@@ -1,6 +1,5 @@
 public class Circle extends MyShape {
-    int xCoordinate;
-    int yCoordinate;
+    Point center;
     int radius;
 
     public Circle(
@@ -8,13 +7,11 @@ public class Circle extends MyShape {
             int yCoordinate,
             int radius
     ) {
-        this.xCoordinate = xCoordinate;
-        this.yCoordinate = yCoordinate;
+        this.center = new Point(xCoordinate, yCoordinate);
         this.radius = radius;
     }
     public Circle(){
-        this.xCoordinate = 0;
-        this.yCoordinate = 0;
+        this.center = new Point(0, 0);
         this.radius = 1;
     }
     public Circle(
@@ -24,41 +21,31 @@ public class Circle extends MyShape {
             String color,
             boolean filled
     ) {
-        this.xCoordinate = xCoordinate;
-        this.yCoordinate = yCoordinate;
+        this.center = new Point(xCoordinate, yCoordinate);
         this.radius = radius;
         this.color = color;
         this.filled = filled;
     }
+
     public int getXCoordinate() {
-        return xCoordinate;
+        return center.xCoordinate;
     }
-
     public int getYCoordinate() {
-        return yCoordinate;
+        return center.yCoordinate;
     }
-
     public int getRadius() {
         return radius;
     }
-    public void setXCoordinate(int xCoordinate) {
-        this.xCoordinate = xCoordinate;
-    }
-
-    public void setYCoordinate(int yCoordinate) {
-        this.yCoordinate = yCoordinate;
-    }
+   public void setCenter(Point center) {
+        this.center = center;
+   }
 
     public void setRadius(int radius) {
         this.radius = radius;
     }
     @Override
-    public String toString() {
-        return "Circle {" +
-                "XCoordinate = " + xCoordinate +
-                ", YCoordinate = " + yCoordinate +
-                ", Radius = " + radius +
-                "} which is subclass of " + super.toString();
+    public String toString(){
+        return "Circle {Center = (" + center.xCoordinate + ", " + center.yCoordinate + "), Radius = " + radius + "}";
     }
     @Override
     public boolean equals(Object obj) {
@@ -69,15 +56,20 @@ public class Circle extends MyShape {
             return false;
         }
         Circle other = (Circle) obj;
-        return (this.xCoordinate == other.xCoordinate) &&
-                (this.yCoordinate == other.yCoordinate) &&
-                (this.radius == other.radius);
+
+        if(this.radius != other.radius){
+            return false;
+        }
+        if(this.center.xCoordinate != other.center.xCoordinate){
+            return false;
+        }
+        return this.center.yCoordinate == other.center.yCoordinate;
     }
     @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + this.xCoordinate;
-        result = 31 * result + this.yCoordinate;
+        int result = 17;
+        result = 31 * result + this.center.xCoordinate;
+        result = 31 * result + this.center.yCoordinate;
         result = 31 * result + this.radius;
         return result;
     }
@@ -90,8 +82,7 @@ public class Circle extends MyShape {
     }
 
     Double getDistanceTo(Circle anotherCircle){
-        return Math.sqrt(Math.pow((this.xCoordinate - anotherCircle.xCoordinate), 2) +
-                Math.pow((this.yCoordinate - anotherCircle.yCoordinate), 2));
+        return center.getDistanceC(anotherCircle.center);
     }
 }
 

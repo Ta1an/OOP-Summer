@@ -3,10 +3,7 @@ import javafx.util.Pair;
 import static java.lang.Math.abs;
 
 public class Rectangle extends MyShape {
-    int xTopLeftCoordinate;
-    int yTopLeftCoordinate;
-    int xBottomRightCoordinate;
-    int yBottomRightCoordinate;
+    Point points;
 
     public Rectangle(
             int xTopLeftCoordinate,
@@ -14,16 +11,10 @@ public class Rectangle extends MyShape {
             int xBottomRightCoordinate,
             int yBottomRightCoordinate
     ) {
-        this.xTopLeftCoordinate = xTopLeftCoordinate;
-        this.yTopLeftCoordinate = yTopLeftCoordinate;
-        this.xBottomRightCoordinate = xBottomRightCoordinate;
-        this.yBottomRightCoordinate = yBottomRightCoordinate;
+        this.points = new Point(xTopLeftCoordinate, yTopLeftCoordinate, xBottomRightCoordinate, yBottomRightCoordinate);
     }
     public Rectangle(){
-        this.xTopLeftCoordinate = 0;
-        this.yTopLeftCoordinate = 0;
-        this.xBottomRightCoordinate = 1;
-        this.yBottomRightCoordinate = -1;
+        this.points = new Point(0, 0, 1, -1);
 
     }
     public Rectangle(
@@ -34,42 +25,34 @@ public class Rectangle extends MyShape {
             String color,
             boolean filled
     ) {
-      this.xTopLeftCoordinate = xTopLeftCoordinate;
-      this.yTopLeftCoordinate = yTopLeftCoordinate;
-      this.xBottomRightCoordinate = xBottomRightCoordinate;
-      this.yBottomRightCoordinate = yBottomRightCoordinate;
-      this.color = color;
-      this.filled = filled;
+        this.points = new Point(xTopLeftCoordinate, yTopLeftCoordinate, xBottomRightCoordinate, yBottomRightCoordinate);
+        this.color = color;
+        this.filled = filled;
     }
 
     public Pair<Integer, Integer> getTopLeftCoordinate() {
-        return new Pair<Integer, Integer>(xTopLeftCoordinate, yTopLeftCoordinate);
+        return points.getTopLeftCoordinate();
     }
     public Pair<Integer, Integer> getBottomRightCoordinate() {
-        return new Pair<Integer, Integer>(xBottomRightCoordinate, yBottomRightCoordinate);
+        return points.getBottomRightCoordinate();
     }
     public void setTopLeftCoordinate(
             int xTopLeftCoordinate,
             int yTopLeftCoordinate
     ) {
-        this.xTopLeftCoordinate = xTopLeftCoordinate;
-        this.yTopLeftCoordinate = yTopLeftCoordinate;
+        this.points = new Point(xTopLeftCoordinate, yTopLeftCoordinate);
     }
     public void setBottomRightCoordinate(
             int xBottomRightCoordinate,
             int yBottomRightCoordinate
     ) {
-        this.xBottomRightCoordinate = xBottomRightCoordinate;
-        this.yBottomRightCoordinate = yBottomRightCoordinate;
-    }
-    public void setYBottomRightCoordinate(int yBottomRightCoordinate) {
-        this.yBottomRightCoordinate = yBottomRightCoordinate;
+        this.points = new Point(xBottomRightCoordinate, yBottomRightCoordinate);
     }
     @Override
     public String toString() {
         return "Rectangle {" +
-                "TopLeftCoordinate = (" + xTopLeftCoordinate + ", " + yTopLeftCoordinate + ')' +
-                ", BottomRightCoordinate = (" + xBottomRightCoordinate + ", " + yBottomRightCoordinate + ')' +
+                "TopLeftCoordinate = (" + points.xTopLeftCoordinate + ", " + points.yTopLeftCoordinate + ')' +
+                ", BottomRightCoordinate = (" + points.xBottomRightCoordinate + ", " + points.yBottomRightCoordinate + ')' +
                 "} which is subclass of " + super.toString();
     }
     @Override
@@ -81,50 +64,45 @@ public class Rectangle extends MyShape {
             return false;
         }
         Rectangle rectangle = (Rectangle) obj;
-        if(this.xTopLeftCoordinate != rectangle.xTopLeftCoordinate){
+        if(this.points.xTopLeftCoordinate != rectangle.points.xTopLeftCoordinate){
             return false;
         }
-        if(this.yTopLeftCoordinate != rectangle.yTopLeftCoordinate){
+        if(this.points.xBottomRightCoordinate != rectangle.points.xBottomRightCoordinate){
             return false;
         }
-        if(this.xBottomRightCoordinate != rectangle.xBottomRightCoordinate){
+        if(this.points.yTopLeftCoordinate != rectangle.points.yTopLeftCoordinate){
             return false;
         }
-        return this.yBottomRightCoordinate == rectangle.yBottomRightCoordinate;
+        return this.points.yBottomRightCoordinate == rectangle.points.yBottomRightCoordinate;
     }
     @Override
     public int hashCode(){
-        int result = super.hashCode();
-        result = 31 * result + xTopLeftCoordinate;
-        result = 31 * result + yTopLeftCoordinate;
-        result = 31 * result + xBottomRightCoordinate;
-        result = 31 * result + yBottomRightCoordinate;
+        int result = 17;
+        result = 31 * result + points.xTopLeftCoordinate;
+        result = 31 * result + points.yTopLeftCoordinate;
+        result = 31 * result + points.xBottomRightCoordinate;
+        result = 31 * result + points.yBottomRightCoordinate;
         return result;
     }
 
     int getArea(){
-        return (xBottomRightCoordinate-xTopLeftCoordinate)*
-                (yTopLeftCoordinate-yBottomRightCoordinate);
+        return (points.xBottomRightCoordinate-points.xTopLeftCoordinate)*
+                (points.yTopLeftCoordinate-points.yBottomRightCoordinate);
     }
     int getPerimeter(){
-        return 2*((xBottomRightCoordinate-xTopLeftCoordinate)+
-                (yTopLeftCoordinate-yBottomRightCoordinate));
+        return 2*((points.xBottomRightCoordinate-points.xTopLeftCoordinate)+
+                (points.yTopLeftCoordinate-points.yBottomRightCoordinate));
     }
-    int getCenterX(){
-        return (xBottomRightCoordinate+xTopLeftCoordinate)/2;
-    }
-    int getCenterY(){
-        return (yBottomRightCoordinate+yTopLeftCoordinate)/2;
-    }
+
     int getLength(){
-        return (xBottomRightCoordinate - xTopLeftCoordinate);
+        return (points.xBottomRightCoordinate - points.xTopLeftCoordinate);
     }
     int getWidth(){
-        return (yTopLeftCoordinate-yBottomRightCoordinate);
+        return (points.yTopLeftCoordinate-points.yBottomRightCoordinate);
     }
 
     Double getDistanceToTheCenterOf(Rectangle anotherRectangle){
-        return Math.sqrt(Math.pow((getCenterX() - anotherRectangle.getCenterX()), 2) +
-                Math.pow((getCenterY() - anotherRectangle.getCenterY()), 2));
+        return Math.sqrt(Math.pow((points.getCenterX() - anotherRectangle.points.getCenterX()), 2) +
+                Math.pow((points.getCenterY() - anotherRectangle.points.getCenterY()), 2));
     }
 }

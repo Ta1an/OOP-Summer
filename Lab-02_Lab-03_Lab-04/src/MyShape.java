@@ -3,7 +3,7 @@ public class MyShape {
     boolean filled;
 
     public MyShape(){
-        this.color = "black";
+        this.color = "Black";
         this.filled = false;
     }
     public MyShape(String color, boolean filled) {
