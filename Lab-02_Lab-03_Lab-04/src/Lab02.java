@@ -28,7 +28,8 @@ public class Lab02 {
         System.out.println("Distance: " + myCircle.getDistanceTo(secondCircle));
 
         // Rectangle
-        
+
+        /*
         int xTopLeftCoordinate = input.nextInt();
         int yTopLeftCoordinate = input.nextInt();
         int xBottomRightCoordinate = input.nextInt();
@@ -50,6 +51,8 @@ public class Lab02 {
         System.out.println("Perimeter: " + secondRectangle.getPerimeter());
 
         System.out.println("Distance: " + myRectangle.getDistanceToTheCenterOf(secondRectangle));
+
+         */
 
     }
 }

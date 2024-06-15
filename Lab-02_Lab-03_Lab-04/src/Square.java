@@ -29,8 +29,8 @@ public class Square extends Rectangle {
 
     @Override
     public String toString() {
-        return "Square {Coordinates = (" + points.xTopLeftCoordinate + ", " +
-                points.yTopLeftCoordinate + "), Side Length = " + getSideLength() + "} which is subclass of "+ super.toString();
+        return "Square {Coordinates = (" + TopLeftCoordinate.x + ", " +
+                TopLeftCoordinate.y + "), Side Length = " + getSideLength() + "} which is subclass of "+ super.toString();
     }
     @Override
     public boolean equals(Object obj) {

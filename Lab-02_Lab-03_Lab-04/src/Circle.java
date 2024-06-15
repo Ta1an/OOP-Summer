@@ -28,25 +28,30 @@ public class Circle extends MyShape {
     }
 
     public int getXCoordinate() {
-        return center.xCoordinate;
+        return center.x;
     }
     public int getYCoordinate() {
-        return center.yCoordinate;
+        return center.y;
     }
     public int getRadius() {
         return radius;
     }
-   public void setCenter(Point center) {
-        this.center = center;
-   }
 
+    public void setXCoordinate(int xCoordinate) {
+        this.center.x = xCoordinate;
+    }
+    public void setYCoordinate(int yCoordinate) {
+        this.center.y = yCoordinate;
+    }
     public void setRadius(int radius) {
         this.radius = radius;
     }
+
     @Override
     public String toString(){
-        return "Circle {Center = (" + center.xCoordinate + ", " + center.yCoordinate + "), Radius = " + radius + "}";
+        return "Circle {" + center.toString() + "Radius = " + radius + "}";
     }
+
     @Override
     public boolean equals(Object obj) {
         if(this == obj){
@@ -56,20 +61,20 @@ public class Circle extends MyShape {
             return false;
         }
         Circle other = (Circle) obj;
-
-        if(this.radius != other.radius){
+        if(center.x != other.center.x){
             return false;
         }
-        if(this.center.xCoordinate != other.center.xCoordinate){
+        if(center.y != other.center.y){
             return false;
         }
-        return this.center.yCoordinate == other.center.yCoordinate;
+        return radius == other.radius;
     }
+
     @Override
     public int hashCode() {
         int result = 17;
-        result = 31 * result + this.center.xCoordinate;
-        result = 31 * result + this.center.yCoordinate;
+        result = 31 * result + this.center.x;
+        result = 31 * result + this.center.y;
         result = 31 * result + this.radius;
         return result;
     }
@@ -82,7 +87,7 @@ public class Circle extends MyShape {
     }
 
     Double getDistanceTo(Circle anotherCircle){
-        return center.getDistanceC(anotherCircle.center);
+        return center.getDistance(anotherCircle.center);
     }
 }
 
