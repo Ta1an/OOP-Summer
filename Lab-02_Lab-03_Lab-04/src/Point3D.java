@@ -8,7 +8,6 @@ public class Point3D {
         this.y = y;
         this.z = z;
     }
-
     public int getX() {
         return x;
     }
@@ -18,7 +17,6 @@ public class Point3D {
     public int getZ() {
         return z;
     }
-
     public void setX(int x) {
         this.x = x;
     }
@@ -27,5 +25,14 @@ public class Point3D {
     }
     public void setZ(int z) {
         this.z = z;
+    }
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ", " + z + ")";
+    }
+    Double getDistance(Point3D anotherPoint){
+        return Math.sqrt(Math.pow((this.x - anotherPoint.x), 2) +
+                Math.pow((this.x - anotherPoint.x) ,2) +
+                Math.pow((this.z - anotherPoint.z), 2));
     }
 }

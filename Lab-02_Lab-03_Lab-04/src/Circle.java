@@ -36,7 +36,6 @@ public class Circle extends MyShape {
     public int getRadius() {
         return radius;
     }
-
     public void setXCoordinate(int xCoordinate) {
         this.center.x = xCoordinate;
     }
@@ -49,7 +48,7 @@ public class Circle extends MyShape {
 
     @Override
     public String toString(){
-        return "Circle {" + center.toString() + "Radius = " + radius + "}";
+        return "Circle {Center = " + center.toString() + ", Radius = " + radius + "}";
     }
 
     @Override
@@ -73,19 +72,26 @@ public class Circle extends MyShape {
     @Override
     public int hashCode() {
         int result = 17;
-        result = 31 * result + this.center.x;
-        result = 31 * result + this.center.y;
-        result = 31 * result + this.radius;
+        if(center.x != 0){
+            result = 31 * result *center.x;
+        }
+        if(center.y != 0){
+            result = 31 * result * center.y;
+        }
+        if(radius != 0){
+            result = 31 * result + radius;
+        }
         return result;
     }
-
+    int getDiameter(){
+        return radius * 2;
+    }
     Double getArea(){
         return Math.PI * Math.pow(this.radius, 2);
     }
     Double getCircumference(){
         return 2 * Math.PI * this.radius;
     }
-
     Double getDistanceTo(Circle anotherCircle){
         return center.getDistance(anotherCircle.center);
     }

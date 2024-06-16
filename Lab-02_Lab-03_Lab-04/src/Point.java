@@ -10,21 +10,21 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-    public int getXCoordinate() {
+    public int getX() {
         return x;
     }
-    public int getYCoordinate() {
+    public int getY() {
         return y;
     }
-    public void setXCoordinate(int x) {
+    public void setX(int x) {
         this.x = x;
     }
-    public void setYCoordinate(int y) {
+    public void setY(int y) {
         this.y = y;
     }
     @Override
     public String toString() {
-        return "Coordinates = (" + x + ", " + y + ")";
+        return "(" + x + ", " + y + ")";
     }
     Double getDistance(Point anotherPoint) {
         return Math.sqrt(pow((x - anotherPoint.x), 2) +

@@ -1,7 +1,3 @@
-import javafx.util.Pair;
-
-import static java.lang.Math.abs;
-
 public class Rectangle extends MyShape {
     Point TopLeftCoordinate;
     Point BottomRightCoordinate;
@@ -54,8 +50,10 @@ public class Rectangle extends MyShape {
     }
     @Override
     public String toString() {
-        return "Rectangle {TopLeftCoordinate = (" + TopLeftCoordinate.toString() +
-                "), BottomRightCoordinate = (" + BottomRightCoordinate.toString() + ")} which is subclass of " + super.toString();
+        return "Rectangle {TopLeftCoordinate = (" + TopLeftCoordinate.x + ", " + TopLeftCoordinate.y +
+                "), BottomRightCoordinate = (" + BottomRightCoordinate.x + ", " + BottomRightCoordinate.y + ")} " +
+                "which is subclass of "
+                + super.toString();
     }
     @Override
     public boolean equals(Object obj) {
@@ -74,17 +72,27 @@ public class Rectangle extends MyShape {
     @Override
     public int hashCode(){
         int result = 17;
-        result = 31 * result + TopLeftCoordinate.hashCode();
-        result = 31 * result + BottomRightCoordinate.hashCode();
+        if(TopLeftCoordinate.x != 0){
+            result = 31 * result * TopLeftCoordinate.x;
+        }
+        if(TopLeftCoordinate.y != 0){
+            result = 31 * result * TopLeftCoordinate.y;
+        }
+        if(BottomRightCoordinate.x != 0){
+            result = 31 * result + BottomRightCoordinate.x;
+        }
+        if(BottomRightCoordinate.y != 0){
+            result = 31 * result + BottomRightCoordinate.y;
+        }
         return result;
     }
 
     int getArea(){
-        return (BottomRightCoordinate.x- TopLeftCoordinate.x)*
+        return (BottomRightCoordinate.x - TopLeftCoordinate.x) *
                 (TopLeftCoordinate.y - BottomRightCoordinate.y);
     }
     int getPerimeter(){
-        return 2*((BottomRightCoordinate.x - TopLeftCoordinate.x)+
+        return 2*((BottomRightCoordinate.x - TopLeftCoordinate.x) +
                 (TopLeftCoordinate.y - BottomRightCoordinate.y));
     }
 
@@ -100,9 +108,11 @@ public class Rectangle extends MyShape {
     int getCenterY(){
         return (TopLeftCoordinate.y + BottomRightCoordinate.y)/2;
     }
+    Point getCenter(){
+        return new Point(getCenterX(), getCenterY());
+    }
 
     Double getDistanceToTheCenterOf(Rectangle anotherRectangle){
-        return Math.sqrt(Math.pow((getCenterX() - anotherRectangle.getCenterX()), 2) +
-                Math.pow((getCenterY() - anotherRectangle.getCenterY()), 2));
+        return getCenter().getDistance(anotherRectangle.getCenter());
     }
 }

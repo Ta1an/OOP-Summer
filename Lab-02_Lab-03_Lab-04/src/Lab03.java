@@ -4,8 +4,11 @@ public class Lab03 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        System.out.print("Enter a coordinates of square: ");
         int xCoordinate = input.nextInt();
         int yCoordinate = input.nextInt();
+
+        System.out.print("Enter a side length of square: ");
         int sideLength = input.nextInt();
 
         Square square = new Square(xCoordinate, yCoordinate, sideLength);
@@ -15,6 +18,7 @@ public class Lab03 {
         System.out.println("Color of square is: " + square.getColor());
         System.out.println("Is square filled: " + square.isFilled());
 
+        System.out.print("Enter new color for square: ");
         String newColor = input.next();
         square.setColor(newColor);
 
