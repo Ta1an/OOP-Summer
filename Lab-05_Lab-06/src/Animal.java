@@ -10,7 +10,7 @@ public class Animal {
     public void setName(String name) {
         this.name = name;
     }
-    public void getSound(){
+    public void sound(){
         System.out.println("The animal is sound: ");
     }
     @Override

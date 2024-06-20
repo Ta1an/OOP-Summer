@@ -10,7 +10,7 @@ public class AnimalArrayList {
     public AnimalArrayList() {
         arrayList = new Animal[10];
     }
-    public int getSize(){
+    public int size(){
         return this.size;
     }
     public boolean isEmpty(){
