@@ -1,8 +1,9 @@
 import java.util.LinkedList;
 
-public class AnimalLinkedList extends LinkedList {
+public class AnimalLinkedList implements AnimalList{
     private int size;
     private Node header;
+    private Node tail;
 
     public AnimalLinkedList(){
         header = new Node(null, null, null);
@@ -25,30 +26,26 @@ public class AnimalLinkedList extends LinkedList {
             size++;
         }
     }
-    private Node middle(Node start, Node end){
-        if(start == null){
-            return null;
-        }
-        Node slow = start;
-        Node fast = start.next;
-
-        while(fast != end){
-            fast = fast.next;
-
-            if(fast != end){
-                slow = slow.next;
-                fast = fast.next;
-            }
-        }
-        return slow;
-    }
     private Node findNodeByIndexOf(int index){
         Node current = header;
-        for(int i = 0; i < size; i++){
-            if(index == i){
-                return current;
+        if(index < 0 || index >= size){
+            return null;
+        }
+        if(index < size/2){
+            for(int i = 0; i < size/2; i++){
+                if(index == i){
+                    return current;
+                }
+                current = current.next;
             }
-            current = current.next;
+        }
+        else{
+            for(int i = 0; i < size; i++){
+                if(index == i){
+                    return current;
+                }
+                current = current.next;
+            }
         }
         return null;
     }

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class AnimalArrayList {
+public class AnimalArrayList implements AnimalList {
     private Animal[] arrayList;
     private int size;
 
@@ -30,11 +30,10 @@ public class AnimalArrayList {
             newArray = arrayList;
         }
     }
-    public boolean add(Animal animal){
+    public void add(Animal animal){
         checkSize((int) (arrayList.length * 0.3));
         arrayList[size] = animal;
         size++;
-        return true;
 
     }
     public void set(int index, Animal animal){

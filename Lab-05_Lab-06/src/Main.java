@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        AnimalLinkedList animalLinkedList = new AnimalLinkedList();
+        AnimalList animalLinkedList = new AnimalLinkedList();
         Animal cat = new Cat("Kara");
         Animal dog = new Dog("Connor");
 
@@ -19,7 +19,5 @@ public class Main {
             curAnimal.sound();
         }
         animalLinkedList.clear();
-
-        System.out.println(animalLinkedList.isEmpty());
     }
 }
