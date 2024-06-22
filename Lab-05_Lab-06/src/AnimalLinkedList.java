@@ -1,4 +1,6 @@
-public class AnimalLinkedList {
+import java.util.LinkedList;
+
+public class AnimalLinkedList extends LinkedList {
     private int size;
     private Node header;
 
@@ -23,10 +25,27 @@ public class AnimalLinkedList {
             size++;
         }
     }
+    private Node middle(Node start, Node end){
+        if(start == null){
+            return null;
+        }
+        Node slow = start;
+        Node fast = start.next;
+
+        while(fast != end){
+            fast = fast.next;
+
+            if(fast != end){
+                slow = slow.next;
+                fast = fast.next;
+            }
+        }
+        return slow;
+    }
     private Node findNodeByIndexOf(int index){
         Node current = header;
         for(int i = 0; i < size; i++){
-            if(i == index){
+            if(index == i){
                 return current;
             }
             current = current.next;
@@ -42,9 +61,10 @@ public class AnimalLinkedList {
     }
     public void set(int index, Animal element){
         Node node = findNodeByIndexOf(index);
-        if(node.element != null){
-            node.prev.element = element;
+        if(node != null){
+
             node.prev.next.element = element;
+            node.prev.element = element;
 
             node.prev.next = node;
             node.next.prev = node;
@@ -57,6 +77,11 @@ public class AnimalLinkedList {
         return size == 0;
     }
     public void clear(){
+        Node current = header;
+        for(int i = 0; i < size; i++){
+            current = current.next;
+            current.element = null;
+        }
         size = 0;
     }
     private class Node{

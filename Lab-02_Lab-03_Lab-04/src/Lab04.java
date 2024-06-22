@@ -16,7 +16,7 @@ public class Lab04 {
 
         System.out.println("INITIAL - " + myHashMap.size() + " " +  myHashMap.get(myCircle));
 
-        Circle circleWithTheSameAttributes = new Circle(0, 0, 1);
+        Circle circleWithTheSameAttributes = new Circle(0, 0, 3);
         myHashMap.put(circleWithTheSameAttributes, "SAME CIRCLES");
 
         System.out.println("ADDED CIRCLE WITH THE SAME ATTRIBUTES - " + myHashMap.size() + " " +  myHashMap.get(myCircle));

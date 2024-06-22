@@ -13,10 +13,13 @@ public class Main {
 
         animalLinkedList.set(1, newDog);
 
-        for (int i = 0; i < animalLinkedList.size(); i++) {
+        for(int i = 0; i < animalLinkedList.size(); i++) {
             Animal curAnimal = animalLinkedList.get(i);
             System.out.print("Animal " + curAnimal.getName() + " says ");
             curAnimal.sound();
         }
+        animalLinkedList.clear();
+
+        System.out.println(animalLinkedList.isEmpty());
     }
 }

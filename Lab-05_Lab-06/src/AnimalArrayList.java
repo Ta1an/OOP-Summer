@@ -18,18 +18,24 @@ public class AnimalArrayList {
     }
     private void copyElementsFrom(Animal[] olderElements){
         this.size = olderElements.length;
-        this.arrayList = olderElements;
+        for(int i = 0; i < olderElements.length; i++){
+            this.arrayList[i] = olderElements[i];
+        }
+
     }
     public void checkSize(int needCapacity){
-        if(size + needCapacity > arrayList.length){
+        if(size + needCapacity >= arrayList.length){
             Animal[] newArray = new Animal[arrayList.length * 2];
             copyElementsFrom(arrayList);
             newArray = arrayList;
         }
     }
-    public void add(Animal animal){
-        checkSize((int) (arrayList.length*0.3));
-        arrayList[size++] = animal;
+    public boolean add(Animal animal){
+        checkSize((int) (arrayList.length * 0.3));
+        arrayList[size] = animal;
+        size++;
+        return true;
+
     }
     public void set(int index, Animal animal){
         arrayList[index] = animal;
