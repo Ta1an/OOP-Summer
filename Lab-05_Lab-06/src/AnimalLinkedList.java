@@ -1,33 +1,49 @@
-import java.util.LinkedList;
-
 public class AnimalLinkedList implements AnimalList{
+    private class Node{
+        Animal element;
+        Node next;
+        Node prev;
+
+        public Node(Animal element, Node next, Node prev){
+            this.element = element;
+            this.next = next;
+            this.prev = prev;
+        }
+    }
+    private Node head;
     private int size;
-    private Node header;
-    private Node tail;
 
     public AnimalLinkedList(){
-        header = new Node(null, null, null);
-        header.next = header;
-        header.prev = header;
+        head = new Node(null, null, null);
+        head.next = head;
+        head.prev = head;
         size = 0;
     }
-    private void add(Animal animal, Node node){
-        Node newNode = new Node(animal, node, node.prev);
+    private void add(Animal element, Node node){
+        Node newNode = new Node(element, node, node.prev);
         newNode.next.prev = newNode;
         newNode.prev.next = newNode;
         size++;
     }
-    public void add(Animal animal){
-        add(animal, header.next);
-    }
-    public void addAll(AnimalArrayList animalArrayList){
-        for(int i = 0; i < animalArrayList.size(); i++){
-            add(animalArrayList.get(i), header);
-            size++;
+    public void add(Animal element){
+        Node current = head.next;
+        if(size == 0){
+            add(element, head);
+        }
+        else{
+            add(element, current);
+            current = current.next;
         }
     }
-    private Node findNodeByIndexOf(int index){
-        Node current = header;
+    public void addAll(AnimalArrayList arrayList){
+        Node current = head.next;
+        for(int i = 0; i < size; i++){
+            add(arrayList.get(i), current);
+            current = current.next;
+        }
+    }
+    public Node findNodeByIndexOf(int index){
+        Node current = head.next;
         if(index < 0 || index >= size){
             return null;
         }
@@ -50,18 +66,16 @@ public class AnimalLinkedList implements AnimalList{
         return null;
     }
     public Animal get(int index){
-       Node node = findNodeByIndexOf(index);
-       if(node == null){
-           return null;
-       }
-       return node.element;
+        Node node = findNodeByIndexOf(index);
+        if(node == null){
+            return null;
+        }
+        return node.element;
     }
     public void set(int index, Animal element){
         Node node = findNodeByIndexOf(index);
         if(node != null){
-
-            node.prev.next.element = element;
-            node.prev.element = element;
+            node.element = element;
 
             node.prev.next = node;
             node.next.prev = node;
@@ -74,22 +88,10 @@ public class AnimalLinkedList implements AnimalList{
         return size == 0;
     }
     public void clear(){
-        Node current = header;
+        Node current = head.next;
         for(int i = 0; i < size; i++){
             current = current.next;
             current.element = null;
-        }
-        size = 0;
-    }
-    private class Node{
-        Animal element;
-        Node next;
-        Node prev;
-
-        Node(Animal element, Node next, Node prev){
-            this.element = element;
-            this.next = next;
-            this.prev = prev;
         }
     }
 }

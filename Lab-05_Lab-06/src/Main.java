@@ -1,23 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        AnimalList animalLinkedList = new AnimalLinkedList();
+        AnimalList animalArrayList = new AnimalLinkedList();
         Animal cat = new Cat("Kara");
         Animal dog = new Dog("Connor");
 
-        animalLinkedList.add(cat);
-        animalLinkedList.add(dog);
+        animalArrayList.add(cat);
+        animalArrayList.add(dog);
 
-        System.out.println("Second animal is " + animalLinkedList.get(1));
+        System.out.println("Second animal is " + animalArrayList.get(1));
 
         Animal newDog = new Dog("Markus");
 
-        animalLinkedList.set(1, newDog);
+        animalArrayList.set(1, newDog);
 
-        for(int i = 0; i < animalLinkedList.size(); i++) {
-            Animal curAnimal = animalLinkedList.get(i);
-            System.out.print("Animal " + curAnimal.getName() + " says ");
-            curAnimal.sound();
+        for(int i = 0; i < animalArrayList.size(); i++){
+            Animal currentAnimal = animalArrayList.get(i);
+            System.out.print("Animal " + currentAnimal.getName() + " says ");
+            currentAnimal.sound();
         }
-        animalLinkedList.clear();
+        animalArrayList.clear();
     }
 }
