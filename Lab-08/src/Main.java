@@ -64,26 +64,30 @@ public class Main {
         for (Tourist tourist : fifthGroup) {
             resortPlace[4].addTourist(tourist);
         }
+        for(int i = 0; i < 5; i++){
+            country.addResort(resortPlace[i]);
+        }
+        country.printAllResort();
+
         int totalTourists = 0;
-        for (ResortPlace place : resortPlace) {
-            totalTourists += place.getTotalTourists();
+        for(int i = 0; i < country.getResortCount(); i++){
+            totalTourists += resortPlace[i].getTotalTourists();
         }
-        System.out.println("Total tourists in country: " + totalTourists + " tourists");
+        System.out.println("Total tourists in country: " + totalTourists + "tourists");
 
-        double sumOfInComes = 0;
-        for (ResortPlace place : resortPlace) {
-            sumOfInComes += place.getTotalInCome();
+        double sumOfIncomes = 0;
+        for(int i = 0; i < 5; i++){
+            sumOfIncomes += resortPlace[i].getTotalInCome();
         }
-        System.out.println("Total incomes in country: " + sumOfInComes + " USD\n");
+        System.out.println("Total incomes in country: " + sumOfIncomes + " USD\n");
 
-        ResortPlace resortPlaceWithMaxInComes = new ResortPlace();
-
-        for(ResortPlace place : resortPlace) {
-            if(place.getTotalInCome() > resortPlaceWithMaxInComes.getTotalInCome()) {
-                resortPlaceWithMaxInComes = place;
+        ResortPlace resortPlaceWithMaxIncomes = new ResortPlace();
+        for(int i = 0; i < country.getResortCount(); i++){
+            if(resortPlace[i].getTotalInCome() > resortPlaceWithMaxIncomes.getTotalInCome()){
+                resortPlaceWithMaxIncomes = resortPlace[i];
             }
         }
-        System.out.println(resortPlaceWithMaxInComes);
+        System.out.println(resortPlaceWithMaxIncomes);
 
         Tourist richestTourist = new Tourist();
 

@@ -30,5 +30,8 @@ public class Country {
         }
         return total;
     }
+    public int getResortCount() {
+        return resortCount;
+    }
 
 }
