@@ -15,6 +15,9 @@ public class Country {
     public void setName(String name) {
         this.name = name;
     }
+    public ResortPlace[] getResortPlaces() {
+        return resortPlaces;
+    }
     public void addResort(ResortPlace resortPlace) {
         resortPlaces[resortCount++] = resortPlace;
     }
@@ -33,5 +36,10 @@ public class Country {
     public int getResortCount() {
         return resortCount;
     }
+    @Override
+    public String toString() {
+        return name;
+    }
+
 
 }
