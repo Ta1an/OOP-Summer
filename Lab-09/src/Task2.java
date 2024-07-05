@@ -3,9 +3,11 @@ import java.io.PrintWriter;
 import java.util.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.Collections;
 
 public class Task2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         File file = new File("src/Lab09.txt");
 
         try {
@@ -26,28 +28,19 @@ public class Task2 {
             System.out.println("Error writing file: " + e.getMessage());
         }
 
-        List<Integer>numbers = new ArrayList<>();
-
-        try {
-            Scanner reader = new Scanner(file);
-            String line = reader.nextLine();
-            while(reader.hasNextLine()) {
-                String[] number = line.split(" ");
-                for (String s : number) {
-                    if (!s.isEmpty()) {
-                        numbers.add(Integer.parseInt(s));
-                    }
+        ArrayList<Integer> integers = new ArrayList<>();
+        try (Scanner scanner = new Scanner(file)) {
+                while (scanner.hasNextInt()) {
+                    integers.add(scanner.nextInt());
                 }
-            }
-            reader.close();
         }
         catch(IOException e) {
             System.out.println("Error reading file: " + e.getMessage());
         }
-        Collections.sort(numbers);
+        Collections.sort(integers);
 
         System.out.println("Sorted numbers:");
-        for (Integer number : numbers) {
+        for (Integer number : integers) {
             System.out.println(number);
         }
     }
