@@ -24,4 +24,14 @@ public class Flashlight {
         }
         return totalEnergy;
     }
+    public double getTotalLifeTime(){
+        return getTotalEnergy()/getTotalPower();
+    }
+    @Override
+    public String toString() {
+        return "FlashLight {" +
+                "Batteries = " + java.util.Arrays.toString(batteries) +
+                ", Total Power = " + getTotalPower() +
+                ", Total Energy = " + getTotalEnergy() + "}";
+    }
 }
